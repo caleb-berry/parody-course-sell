@@ -1,0 +1,558 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero {
+    /* background: linear-gradient(135deg, #6e8efb, #a777e3); */ /* Old gradient */
+    background: linear-gradient(135deg, #0A1931, #185ADB, #00C6CF); /* Deep Blue to Teal */
+    color: white;
+    padding: 40px 0; /* Adjusted padding */
+    text-align: center;
+    min-height: auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.hero-image-container {
+    flex: 0 0 40%;
+    max-width: 40%;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.hero .subtitle {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    max-width: none;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hero-content .cta-button {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #333;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.hero-content .cta-button:hover {
+    background-color: #ffe066;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content .disclaimer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    opacity: 0.8;
+    text-align: left;
+}
+
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+#value-props {
+    background-color: #ffffff;
+}
+
+/* Value Props Section Styles */
+.value-props-content {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    gap: 40px; /* Space between text and image */
+    text-align: left; /* Align text to the left */
+    margin-top: 30px; /* Space below the heading */
+}
+
+.value-props-text {
+    flex: 1; /* Takes up available space */
+    font-size: 1.1em; /* Increase base font size */
+    line-height: 1.7; /* Improve readability */
+    color: #444; /* Slightly darker than default body text */
+}
+
+/* Removed H3 styles */
+/* .value-props-text h3 { ... } */
+
+.value-props-text p {
+    margin-bottom: 1em; /* Add space between paragraphs */
+}
+
+/* Remove list styles as they are no longer used */
+/* .value-props-text ul { ... } */
+/* .value-props-text li { ... } */
+
+.value-props-image {
+    /* flex: 0 0 35%; */ /* Previous size */
+    flex: 0 0 30%; /* Further reduced basis */
+    max-width: 30%; /* Further reduced max-width */
+    align-self: center; /* Align image container center vertically */
+}
+
+.value-props-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    display: block; /* Remove extra space below image */
+}
+
+#testimonials {
+    /* background-color: #f0f0f0; */
+    background: linear-gradient(135deg, #0A1931, #185ADB, #00C6CF); /* Match hero gradient */
+    /* padding: 30px 0 60px 0; */ /* Previous padding */
+    padding: 20px 0 40px 0; /* Reduced vertical padding */
+    color: white; /* Default text color for section */
+}
+
+#testimonials h2 {
+    color: white; /* Ensure heading is white */
+    /* margin-bottom: 20px; */ /* Previous spacing */
+    margin-bottom: 10px; /* Reduced spacing */
+    font-size: 2.2em; /* Reduced font size */
+}
+
+/* Logo Carousel Styles */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Translate by negative half the track width (item width + 2*margin) * num_original_items */
+        /* transform: translateX(calc(- (120px + 20px) * 6)); */ /* Previous calculation */
+        transform: translateX(-840px); /* Corrected calculation: -(140px * 6) */
+    }
+}
+
+.logos-carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    /* margin-top: 40px; */ /* Previous space below heading */
+    margin-top: 25px; /* Reduced space below heading */
+    /* Add subtle gradient mask for fade out effect at edges */
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+}
+
+.logos-track {
+    display: flex;
+    /* width: calc((120px + 20px) * 12); */ /* Previous calculation */
+    width: 1680px; /* Corrected calculation: 140px * 12 */
+    /* animation: scroll-left 30s ease-in-out infinite; */ /* Previous timing */
+    animation: scroll-left 30s linear infinite; /* Reverted to linear, ensure animation name matches */
+}
+
+/* Removed Pause animation on hover */
+/* .logos-carousel:hover .logos-track {
+    animation-play-state: paused;
+} */
+
+.logo-item {
+    flex-shrink: 0;
+    /* width: 180px; */ /* Old width */
+    /* height: 60px; */ /* Old height */
+    width: 120px; /* New width */
+    height: 80px; /* Reduced height */
+    margin: 0 10px; /* Space between items */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    /* border: 1px solid #ddd; */ /* Remove border */
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9em;
+    color: #334; /* Darker color for text on light background */
+    font-weight: 500;
+    padding: 0 10px; /* Padding inside items */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+}
+
+#appointment {
+    background-color: #e9e9e9;
+}
+
+footer {
+    background-color: #333;
+    color: #aaa;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .section {
+        padding: 40px 0; /* Reduce vertical padding */
+    }
+
+    .section h2 {
+        font-size: 1.8em; /* Smaller default section heading */
+    }
+
+    .hero {
+        padding: 30px 0; /* Reduced padding */
+    }
+
+    .hero-container {
+        flex-direction: column; /* Stack image and text on small screens */
+        text-align: center; /* Center text when stacked */
+        gap: 20px;
+    }
+
+    .hero-image-container {
+        flex-basis: auto; /* Reset flex basis */
+        max-width: 70%; /* Allow image container to be wider */
+        margin: 0 auto; /* Center the image container */
+    }
+
+    .hero-image {
+        max-height: 35vh; /* Slightly reduced max height for mobile */
+    }
+
+    .hero-content {
+        text-align: center; /* Ensure text content is centered */
+    }
+
+    .hero h1 {
+        font-size: 2.2em; /* Slightly smaller */
+        text-align: center; /* Ensure centered */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero .subtitle {
+        font-size: 0.95em; /* Slightly smaller */
+        max-width: 95%; /* Allow subtitle to be wider on mobile */
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-content .disclaimer {
+        text-align: center; /* Ensure centered */
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.8em;
+    }
+
+    .cta-button,
+    .hero-content .cta-button { /* Target specifically as well */
+        padding: 12px 25px; /* Slightly adjusted padding */
+        font-size: 0.9em; /* Further reduced font size */
+    }
+
+    .value-props-content {
+        flex-direction: column; /* Stack: Text first, then image */
+        text-align: center; /* Center text block */
+        gap: 30px;
+    }
+
+    .value-props-text,
+    .value-props-image {
+        flex-basis: auto; /* Reset flex basis */
+        max-width: 90%; /* Allow content to take more width */
+        margin: 0 auto; /* Center blocks */
+    }
+
+    .value-props-text {
+        text-align: center; /* Center all text within this block on mobile */
+        font-size: 1em; /* Adjust base font size */
+    }
+
+    .value-props-text h2 {
+        font-size: 1.2em; /* Further reduced heading for mobile */
+    }
+
+    .value-props-image {
+        max-width: 60%; /* Adjust image width on mobile */
+    }
+
+    #testimonials {
+        padding: 25px 0 45px 0; /* Adjusted padding */
+    }
+
+    #testimonials h2 {
+        font-size: 1.6em; /* Smaller heading for mobile */
+        margin-bottom: 15px; /* Adjusted margin */
+    }
+
+    .logos-carousel {
+        margin-top: 15px; /* Adjusted margin */
+        mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+        -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+    }
+
+    .logos-track {
+         animation-duration: 45s;
+    }
+
+    .logo-item {
+        width: 100px;
+        height: 70px;
+        font-size: 0.75em; /* Slightly smaller font */
+    }
+
+    #appointment h2 {
+         font-size: 1.6em; /* Smaller heading */
+    }
+    #appointment p {
+        font-size: 0.9em; /* Smaller text */
+    }
+
+    .modal-content {
+        width: 90%; /* Wider modal on small screens */
+        padding: 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5em;
+    }
+
+    .modal-content p {
+        font-size: 0.9em;
+    }
+
+    #appointmentForm label {
+        font-size: 0.9em;
+    }
+
+    #appointmentForm input[type="date"],
+    #appointmentForm input[type="text"],
+    #appointmentForm input[type="email"] {
+        width: 90%; /* Make inputs take more width */
+        font-size: 0.9em;
+        padding: 12px;
+    }
+
+    .modal-submit-btn {
+        width: 70%; /* Make button wider */
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    /* display: none; */ /* Controlled by JS class now */
+    visibility: hidden; /* Hide but keep in layout for animation */
+    opacity: 0; /* Start fully transparent */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    /* padding-top: 60px; */ /* Padding might interfere with centering, use flex instead */
+    display: flex; /* Use flexbox to center content */
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease, visibility 0.4s ease; /* Smooth fade for background */
+}
+
+/* Class added by JS to show modal */
+.modal.modal-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+@keyframes modalFadeScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px); /* Start smaller, slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0); /* End at full size and original position */
+    }
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #0A1931, #185ADB, #00C6CF); /* Match hero gradient */
+    color: white;
+    /* margin: 5% auto; */ /* Replaced by flex centering */
+    padding: 30px;
+    /* border: 1px solid #888; */ /* Removed border */
+    width: 80%;
+    max-width: 550px; /* Slightly wider for more fields */
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* Enhanced shadow for definition */
+    text-align: center;
+    opacity: 0; /* Start hidden for animation */
+    transform: scale(0.8); /* Start smaller for animation */
+    transition: opacity 0.4s ease 0.1s, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s; /* Smooth animation for content, slight delay and overshoot */
+}
+
+/* Class added by JS to show modal content */
+.modal.modal-visible .modal-content {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    /* animation: modalFadeScaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; */ /* Apply animation using keyframes (Alternative method) */
+    /* Remove the transition line above if using @keyframes animation */
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Form Styles */
+#appointmentForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#appointmentForm label {
+    font-weight: bold;
+    margin-bottom: -5px; /* Adjust spacing */
+}
+
+#appointmentForm input[type="date"],
+#appointmentForm input[type="text"],
+#appointmentForm input[type="email"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    width: 80%; /* Make inputs wider */
+    max-width: 350px; /* Max width for inputs */
+    box-sizing: border-box; /* Include padding in width */
+    text-align: center;
+}
+
+#appointmentForm input::placeholder {
+    color: #aaa; /* Lighter placeholder text */
+    font-style: italic;
+    text-align: center;
+}
+
+.modal-submit-btn {
+    /* Inherits .cta-button styles */
+    margin-top: 10px;
+    width: auto; /* Override potential width inheritance */
+    padding: 12px 30px; /* Slightly smaller padding */
+}
+
+/* Prevent background scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* --- Removing Features Section Styles --- */
+/* #features { ... } */
+/* #features h2 { ... } */
+/* .feature-row { ... } */
+/* .feature-row:last-child { ... } */
+/* .feature-image { ... } */
+/* .feature-image img { ... } */
+/* .feature-text { ... } */
+/* .feature-text h3 { ... } */
+/* .feature-text ul { ... } */
+/* .feature-text li { ... } */
+/* .feature-text li::before { ... } */
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: #aaa;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* --- Removing Features Section (Mobile) --- */
+/* #features h2 { ... } */
+/* .feature-row { ... } */
+/* .feature-image { ... } */
+/* .feature-text { ... } */
+/* .feature-text h3 { ... } */
+/* .feature-text li { ... } */
+/* .feature-text li::before { ... } */
+
+/* --- Footer --- */
+footer p {
+    font-size: 0.8em;
+}

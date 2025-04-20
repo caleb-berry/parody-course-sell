@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your First Million 🚀</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-image-container">
+                <img src="assets/caleb.JPEG" alt="Totally Real Entrepreneur" class="hero-image">
+            </div>
+            <div class="hero-content">
+                <h1>I was just like you...💰💎</h1>
+                <p class="subtitle">I tried the side-hustles... I tried it ALL. ... But I was still broke. 🙄 Then I came across this decade's
+                    most lucrative money-making opportunity. I've scaled my business to average seven figure months in revenue, and it only takes up 10 hours of my week.
+                    Now I spend my time travelling in my private jet ✈️ and cruising around Miami
+                    in my Lamborghini. I did this all before I turned 23. You have time.</p>
+                <button id="openModalBtn" class="cta-button">Book a *FREE* Discovery Call NOW! ✨</button>
+                <p class="disclaimer"><small>*Free call requires non-refundable deposit.</small></p>
+            </div>
+        </div>
+    </header>
+
+    <section id="value-props" class="section">
+        <div class="container">
+            <div class="value-props-content">
+                <div class="value-props-text">
+                    <h2>I went from whining to wine'ing. 🍷</h2>
+                    <p>With our program, expect to transform your life in just 6 months, with less than 10 hours of work per week. After our program, you'll be able to print dough better than the oligarchs.</p>
+                </div>
+                <div class="value-props-image">
+                    <img src="assets/cbwine1.jpg" alt="Celebrating Success (Maybe)">
+                </div>
+            </div>
+            <!-- Placeholder for value props -->
+            <!-- <p>Insert groundbreaking, never-before-seen strategies here...</p> -->
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <div class="container">
+            <!-- <h2>Hear From Our "Successful" Students 🤩</h2> -->
+            <!-- <p>Testimonial 1: "I made $10k in my first week!"** <br><small>**Results not typical, possibly fabricated.</small></p>
+            <p>Testimonial 2: "The mindset shifts are INSANE!"***<br><small>***Shifted from 'skeptical' to 'poorer'.</small></p> -->
+            <h2>After completing our program, our client's have landed elite jobs. 😉</h2>
+            <div class="logos-carousel">
+                <div class="logos-track">
+                    <div class="logo-item">C-Suite @ a Fortune 500 Company</div>
+                    <div class="logo-item">Founder of a Y Combinator Startup</div>
+                    <div class="logo-item">A ton of random crypto companies</div>
+                    <div class="logo-item">Manager at some other Fortune 500 company</div>
+                    <div class="logo-item">Another Y Combinator Startup Founder </div>
+                    <div class="logo-item">Some NFT Project Coder</div>
+                    <!-- Duplicate for seamless scroll -->
+                    <div class="logo-item">C-Suite @ a Fortune 500 Company</div>
+                    <div class="logo-item">Founder of a Y Combinator Startup</div>
+                    <div class="logo-item">A ton of random crypto companies</div>
+                    <div class="logo-item">Manager at some other Fortune 500 company</div>
+                    <div class="logo-item">Another Y Combinator Startup Founder </div>
+                    <div class="logo-item">Some NFT Project Coder</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Absolutely Real Ventures LLC. All Rights Reserved (Maybe).</p>
+        </div>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Book Your Discovery Call 🚀</h2>
+            <p>Select your preferred date. Slots fill up faster than my Lambo goes 0-60! 😉</p>
+            <form id="appointmentForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="e.g., Chad">
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="e.g., Chaddington">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="fake_email1@gmail.com">
+
+                <label for="callDate">Preferred Date:</label>
+                <input type="date" id="callDate" name="callDate" required>
+
+                <button type="submit" class="cta-button modal-submit-btn">Confirm Date</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
